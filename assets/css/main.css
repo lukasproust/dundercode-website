@@ -480,8 +480,12 @@ ul.actions li {
 #header .iconHeader {
 	display: flex;
 	align-items: center;
-	width: 4rem;
+	width: 3rem;
 	margin-right: .5rem
+}
+
+#header .iconHeader .svg {
+	flex: 1;
 }
 
 @media screen and (max-width:1280px) {
