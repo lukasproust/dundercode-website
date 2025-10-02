@@ -1,0 +1,66 @@
+@use "../libs/breakpoints";
+@use "../libs/functions";
+@use "../libs/mixins";
+
+///
+/// Paradigm Shift by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Feature Icons */
+
+ul.feature-icons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: (functions.size(element-margin) * 1.5) 0;
+  padding-left: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  li {
+    margin: (functions.size(element-margin) * 1.25) 0 0 0;
+    padding: 0.5rem 0 0 4.5rem;
+    position: relative;
+    width: 50%;
+
+    &:before {
+      background-image: mixins.svg-url(
+        '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512"><path d="M256,0l221.7,128v256L256,512L34.3,384V128L256,0z" fill="#{functions.palette(border-bg)}" /></svg>'
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      color: functions.palette(fg);
+      display: block;
+      font-size: 1.25rem;
+      height: 3.25rem;
+      left: 0;
+      line-height: 3.25rem;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 3.25rem;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoints.breakpoint("<=small") {
+    margin: 0 0 (functions.size(element-margin) * 1.5) 0;
+
+    li {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: (functions.size(element-margin) * 1);
+      }
+    }
+  }
+}

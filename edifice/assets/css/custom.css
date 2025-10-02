@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* Cache visuellement, reste annoncé aux lecteurs d'écran */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.shadow-img {
+  opacity: 0.5;
+  background-color: #000;
+  inset: 0;
+  position: absolute;
+}
+
+/*# sourceMappingURL=custom.css.map */
